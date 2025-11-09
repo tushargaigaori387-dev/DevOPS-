@@ -1,0 +1,45 @@
+    1  apt update -y
+    2  docker
+    3  apt  install docker.io -y
+    4  dockdr --version
+    5  docker --version
+    6  service docker status
+    7  vi index.html
+    8  ls
+    9  cat index.html
+   10  ls
+   11  vi Dockerfile
+   12  ls
+   13  cat Dockerfile
+   14  ls
+   15  > Dockerfile
+   16  vi Dockerfile
+   17  ls
+   18  service apache2 status
+   19  ls
+   20  docker build -t login .
+   21  docker images
+   22  ls
+   23  docker build -t login:v1 .
+   24  docker images
+   25  docker run -d --name login-app -p 80:80 login:v1
+   26  docker ps
+   27  ls
+   28  > index.html
+   29  vi index.html
+   30  ls
+   31  cat index.html
+   32  ls
+   33  docker build -t signup:v1 .
+   34  docker images
+   35  docker run -d --name signup-app -p 81:80 signup:v1
+   36  docker ps
+   37  ls
+   38  > index.html
+   39  vi index.html
+   40  cat index.html
+   41  ls
+   42  docker build -t social-app:v1 .
+   43  docker images
+   44  docker run -d --name social-app -p 82:80 social-app:v1
+   45  docker ps

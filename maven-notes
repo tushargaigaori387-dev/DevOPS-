@@ -1,0 +1,105 @@
+Maven
+
+26 August 2025
+20:42
+
+	Wt is maven
+	==========
+	
+	Ø It's a automation build tool and project management tool
+	Ø Primarily maven used for java projects
+	Ø It helps in building , packaging and managing  dependencies of ur project 
+	Ø Developed by Apache software foundation 
+	Ø It will work on the principle convention over configuration (it is going to reducing the need to write lengthy build scripts 
+
+Real time analogy
+===============
+
+	Ø Think maven is a recipe book + grocery manager 
+	Ø Recipe book = how to cook / how to build/run ur project 
+	Ø Grocery manager= it will provide all the ingredients to prepare the recipe / automatically it will download libraries 
+
+
+Why maven
+==========
+
+	Ø Before maven people used Ant tool (another build tool )
+	Ø Ant required manual xml scripting for everything 
+	Ø Dependency management was a headache (you have to downloads and add jar files manually)
+
+	Maven solved this by
+	=================
+
+	Ø Automatic dependency management 
+	Ø Standard directory structure 
+	Ø Easy to integrating with cicd tools .
+	Ø Reproducible builds ( same everywhere)
+
+
+Maven lifecycle
+=============
+
+	Ø Maven has three built-in lifecycle 
+
+	1. Clean:- it will remove previous builds files
+	2. Build:- it will compile ur code, it will test , pkg, deploys
+	3. Site:- it will generate project documentation 
+
+
+Each lifecycle has phases
+====================
+
+	1. Validate:- it will validation project 
+	2. Compile:- compile source code
+	3. Test:- it will run unit tests
+	4. Package:- it will build jar/war file for pkaging ur app
+	5. Verify:- it will run checks
+	6. Install:- it will install in local repo
+	7. Deploy:- push to remote repo(like nexus, artifact repo, maven central)
+
+
+Maven project structure 
+====================
+
+POM.xml file
+==========
+
+	Ø Pom:- project object model
+	Ø It is a heart for maven, without having pom.xml you cant work with maven
+
+Maven repositories 
+================
+
+	Ø Maven uses repositories to store libraries 
+
+	1. Local repo:- it will be on your system.
+	2. Central repo:- default repo for maven
+	3. Remote repo:- where we are going to store all ur war/jar files . Like nexus
+
+Maven commands
+===============
+
+	1. Mvn clean:- clean project
+	2. Mvn compile:- it will compile src
+	3. Mvn package:- it will pkg ur src into jar/war file
+	4. Mvn install :- it will into local repo
+	5. Mvn deploy:- it will upload/push ur jar/war file into remote repo(nexus)
+	6. Mvn dependency:tree :- it will show you despondency hierarchy 
+
+
+Advantage of maven
+=================
+
+	Ø Easy dependency management
+	Ø Reusable standard project structure
+	Ø Portable builds across  env
+	Ø Rich pulgin ecosystem
+	Ø Work well with cicd tools
+
+
+Files in maven
+===========
+
+	Ø War file:- web archive :- it is for maven based app
+	Ø Jar file:- java archive:- it is for java based app
+Ear file:- enterprise archive:- it is for enterprise level app

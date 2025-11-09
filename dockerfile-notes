@@ -1,0 +1,122 @@
+Dockerfile
+
+03 September 2025
+20:36
+
+	Ø Whenever you want to write a dockerfile you should create a like this only it is Dockerfile
+	Ø Always dockerfile should start with FROM instruction 
+
+
+	1. FROM:- it is used to specify a base image for the container
+
+FROM ubunut
+
+FROM amazon-linux
+
+FROM nginx
+
+FROM node:latest
+
+FROM node:lts-slim
+
+FROM python:2.3.1
+
+FROM python:3.9.23
+
+FROM openjdk:17.0.1
+
+FROM openjdk:26-slim-trixie
+
+
+	2. MAINTAINER:- it is used to specify dockerfile owner or author
+
+MAINTAINER murali <muraliclahan526@gmail.com>
+
+LABEL maintainer="murali <clahantechnologies @gamil.com>"
+
+
+	3. WORKDIR:- it is used to specify or creating a working directory inside the container for containing all app src, libraries, dependencies, files and folders.
+
+WORKDIR /app
+
+WORKDIR  /murali
+
+WORKDIR /usr/src/app
+
+	4. COPY:- it is used to copy all ur app src, libraries, dependencies, files and folders from host machine to container machine (into workdir)
+
+COPY  <src-location> <dest-path>
+
+COPY .  .
+
+	5. RUN :- it is used to execute commands while building docker image
+
+RUN apt update -y
+
+RUN yum update -y
+
+RUN apt install apache2 -y
+
+RUN npm  install
+
+RUN pip install
+
+RUN apt install python3 -y
+
+RUN apt install java -y
+
+RUN yum install java -y
+
+	6. EXPOSE:- it is used to expose app or container port number
+
+EXPOSE 80
+
+EXPOSE 5000
+
+EXPOSE 9000
+
+EXPOSE 3000
+
+EXPOSE 6000
+
+EXPOSE 5002
+
+	7. CMD:- it is used to execute default commands while creating the container
+
+Node start
+
+Node app.js
+
+Node server.js
+
+Pip app.py
+
+CMD ["node", "start"]
+
+CMD ["node", "app.js"]
+
+CMD ["pip", "app.py"]
+
+	Ø Dockerile will execute last one cmd instruction 
+
+
+	1. Apache2 web server:- it will run on port no 80, /var/www/html
+	2. Httpd:- it will work only on amazon linux os, run on port no 80, /var/www/html
+	3. Nginx:- it will run on port no 80 and /var/www.html
+
+
+docker run -d --name <container-name> -p 80(host-port-no):80(container-port-no)  <image-name> 
+
+docker run:- it will pull the image, it will create the container and it will start container
+
+-d:- detached mode :- you are going to running ur container in a background server , whenever you run any container in a background server you can't get any shell to execute any command inside the container , it is used for prod.
+
+--name:- to provide a meaningful name to the container and it should be unique.
+
+-p :- port mapping , you should port numbers of app
+
+Host port number:- it will be decided by Devops engineer , it is our wish you can give any port number and it should be unique 
+
+Container port or app port number:- it will be decided by dev team and you should not change it and you can use same port number for no of containers
+
+Image-name:- 

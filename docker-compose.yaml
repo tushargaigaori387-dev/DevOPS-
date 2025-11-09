@@ -1,0 +1,77 @@
+version: '3.8'
+
+services:
+  bank-app:
+    image: bank-app-2025:v1
+    build: .
+    container_name: Transaction-app
+    ports:
+      - '3000:3000'
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/transactionhistory
+
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - '27017:27017'
+
+# compose commands
+
+    1  apt update -y
+    2  apt install docker.io -y
+    3  docker --version
+    4  serivce docker status
+    5  service docker status
+    6  git clone https://github.com/Macharla-Sharanya/Transaction-History.git
+    7  ls
+    8  cd Transaction-History/
+    9  ls
+   10  rm Dockerfile
+   11  ls
+   12  vi Dockerfile
+   13  ls
+   14  cat Dockerfile
+   15  ls
+   16  docker images
+   17  docker ps -a
+   18  docker build -t bank-app-25:v1 .
+   19  docker images
+   20  docker run -d --name bank-app -p 3000:3000 bank-app-25:v1
+   21  docker ps
+   22  docker inspect bank-app
+   23  curl 172.17.0.2:3000
+   24  docker ps
+   25  docker logs bank-app
+   26  ls
+   27  docker compose
+   28  docker compose version
+   29  docker-compose version
+   30  sudo apt-get update
+   31  docker compose version
+   32  sudo apt-get install docker-compose-plugin
+   33  apt upgrade && update -y
+   34  sudo apt-get install docker-compose-plugin -y
+   35  docker compose version
+   36  curl -SL https://github.com/docker/compose/releases/download/v2.39.2/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+   37  ls
+   38  chmod +x /usr/local/bin/docker-compose
+   39  ls
+   40  docker-compose --version
+   41  ls
+   42  rm docker-compose.yml
+   43  vi docker-compose.yaml
+   44  ls
+   45  cat docker-compose.yaml
+   46  ls
+   47  docker-compose up -d
+   48  docker ps
+   49  vi docker-compose.yaml
+   50  docker-compose up -d
+   51  docker ps
+   52  docker exec -it Transaction-app bash
+   53  docker exec -it mongodb bash
+

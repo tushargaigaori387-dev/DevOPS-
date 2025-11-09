@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  netflix-app:
+    image: muralisocial123/netflix-2025:latest
+    container_name: netflix
+    ports:
+      - '80:80'
+
+  ipl-app:
+    image: muralisocial123/ipl-app:v1
+    container_name: ipl
+    ports:
+      - '3000:3000'
+
+  nginx-app:
+    image: nginx
+    container_name: nginx
+    ports:
+      - '81:80'
+
+    depends_on:
+      - ipl-app
+      - netflix-app
+
+

@@ -1,0 +1,42 @@
+pipeline {
+    agent any
+    
+    tools{
+        maven 'maven3'
+        jdk 'jdk21'
+    }
+    
+    environment {
+        SCANNER_HOME= tool 'sonar-scanner'
+    }
+
+    stages {
+        stage('git checkout') {
+            steps {
+               git 'https://github.com/Msocial123/maven-web-application.git'
+            }
+        }
+        
+        stage ('sonarqube analysis'){
+            steps{
+                withSonarQubeEnv('sonar') {
+                  sh '''$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=maven-app -Dsonar.projectName=maven-app'''
+                  }
+            }
+        }
+        
+        stage ('build'){
+            steps{
+                sh 'mvn clean package'
+            }
+        }
+        
+        stage ('deploy to nexus'){
+            steps{
+                withMaven(globalMavenSettingsConfig: 'nexus-maven-config', jdk: 'jdk21', maven: 'maven3', traceability: true) {
+                  sh 'mvn deploy'
+                  }
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+Nexus
+
+28 August 2025
+20:38
+
+What is nexus:
+============
+
+
+	Ø It is a artifact repository manager
+	Ø Commonly called nexus
+	Ø Where we are going to store al our war/jar files
+
+Why nexus?
+==========
+
+	Ø Without nexus developers need to download dependencies directly from internet every time (jar, war, npm pkgs, docker images etc)
+	Ø Slow builds due to repeated downloads
+	Ø Dependencies versions can change or disappear
+	Ø No security checks
+	Ø It is hard to share custom artifacts inside the org
+
+Nexus solving this by
+=================
+
+	Ø Acting as a local cache for public repo
+	Ø Allowing you to host internal artifacts (like jar, war, docker images)
+	Ø It will control security and access for who can use for what
+	Ø To integrate with cicd pipelines
+
+Nexus repo types
+==============
+
+	Ø Nexus supports multiple repo formats
+
+	1. Maven:- jar , war, ear
+	2. Npm:- nodejs pkgs
+	3. Pypi:- python pkgs
+	4. Docker :- docker images
+	5. Helm:- k8s helm charts
+	6. Nuget:- .net pkgs
+	7. Yum/apt:- linux pkgs 
+
+
+Types of repo in nexus 
+==================
+	Ø Nexus provides 3 repo types
+
+	1. Hosted repo:- it will store internal artifacts (internal libraries, apps, docker images)
+	2. Proxy repo:- it will act as a caching proxy for external  artifacts 
+	3. Group repo:- it is a combination of multiple hosted and proxy repo into single url
+
+Nexus architecture 
+===============
+
+Nexus two type of artifacts 
+======================
+
+	1. Release artifact:- it is a finally delivery to the client 
+	2. Snapshot:- it is a developer copy
+
+Pom.xml:- snapshot or release

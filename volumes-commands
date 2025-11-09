@@ -1,0 +1,122 @@
+    1  apt update -y
+    2  apt install docker.io -y
+    3  docker-compose version
+    4  apt install docker-compose -y
+    5  docker-compose version
+    6  ls
+    7  vi compose.yaml
+    8  ls
+    9  cat compose.yaml
+   10  ls
+   11  docker images
+   12  docker ps -a
+   13  ls
+   14  docker-compose up -d
+   15  docker ps
+   16  docker-compose down
+   17  docker volume ls
+   18  docker run -it --name c1 -v /murali ubunut /bin/bash
+   19  docker run -it --name c1 -v /murali ubuntu /bin/bash
+   20  ls
+   21  docker volume ls
+   22  ls
+   23  docker ps
+   24  docker ps -a
+   25  docker rm c1
+   26  docker ps -a
+   27  docker inspect volume 22aa529b1b7cd0dd8b96542e9b18922fcafa47a9d46ca8b7c524ef9b8edef8b0
+   28  cd /var/lib/docker/volumes/
+   29  ls
+   30  cd 22aa529b1b7cd0dd8b96542e9b18922fcafa47a9d46ca8b7c524ef9b8edef8b0
+   31  ls
+   32  cd _data
+   33  ls
+   34  cd ipl
+   35  ls
+   36  exit
+   37  ls
+   38  docker run -it --name c2 -v flipkart:/mohan ubuntu /bin/bash
+   39  ls
+   40  docker ps -a
+   41  docker volume ls
+   42  docker inspect flipkart
+   43  cd /var/lib/docker/volumes/
+   44  ls
+   45  cd flipkart/
+   46  ls
+   47  cd _data/
+   48  ls
+   49  exit
+   50  ls
+   51  docker ps -a
+   52  docker rm c2
+   53  docker ps -a
+   54  cd /var/lib/docker/volumes/
+   55  ls
+   56  cd flipkart/
+   57  ls
+   58  cd _data/
+   59  ls
+   60  cd mens/
+   61  ls
+   62  exit
+   63  ls
+   64  cd /opt
+   65  ls
+   66  mkdir amazon
+   67  ls
+   68  cd amazon/
+   69  pwd
+   70  exit
+   71  docker run -it --name d1 -v /opt/amazon:/indian ubuntu /bin/bash
+   72  ls
+   73  docker volume ls
+   74  cd /var/lib/docker/volumes/flipkart/
+   75  ls
+   76  cd ..
+   77  ls
+   78  exit
+   79  docker ps -a
+   80  docker rm d1
+   81  cd /opt
+   82  ls
+   83  cd amazon/
+   84  ls
+   85  cd UT
+   86  LS
+   87  ls
+   88  cd ..
+   89  cd /opt
+   90  ls
+   91  mkdir murali
+   92  cd murali/
+   93  pwd
+   94  exit
+   95  ls
+   96  docker run -it --name c1 -v /opt/murali:/clahan ubuntu /bin/bash
+   97  docker run -it --name c2 --privileged=true --volumes-from c1 ubuntu /bin/bash
+   98  ls
+   99  docker ps -a
+  100  docker rm c2
+  101  docker rm c1
+  102  ls
+  103  cd /opt
+  104  ls
+  105  cd murali/
+  106  ls
+  107  cd DevOps/
+  108  ls
+  109  cd web/
+  110  ls
+  111  docker network ls
+  112  ls
+  113  exit
+  114  ls
+  115  docker-compose up -d
+  116  docker ps
+  117  docker-compose down
+  118  docker-compose up -d
+  119  docker network ls
+  120  docker-compose down
+  121  docker network ls
+  

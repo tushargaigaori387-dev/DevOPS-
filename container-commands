@@ -1,0 +1,121 @@
+    1  apt update -y
+    2  vi index.html
+    3  ls
+    4  cat index.html
+    5  ls
+    6  vi Dockerfile
+    7  ls
+    8  docker
+    9  apt  install docker.io -y
+   10  docker images
+   11  docker ps -a
+   12  ls
+   13  docker buld -t newsletter:v1 .
+   14  docker build -t newsletter:v1 .
+   15  docker images
+   16  docker pull muralisocial123/retail-25:v1
+   17  docker images
+   18  docker tag newsletter:v1 muralisocial123/newsletter:v1
+   19  docker images
+   20  docker login -u muralisocial123
+   21  docker images
+   22  docker push muralisocial123/newsletter:v1
+   23  docker images
+   24  docker run -d --name newsletter -p 80:80 muralisocial123/newsletter
+   25  docker run -d --name newsletter -p 80:80 muralisocial123/newsletter:v1
+   26  docker ps
+   27  docker create --name ipl-app -p 3000:3000 muralisocial123/ipl:latest
+   28  docker ps
+   29  docker ps -a
+   30  docker start ipl-app
+   31  docker ps
+   32  docker stop 79805d757142
+   33  docker ps
+   34  docker ps -a
+   35  docker restart 79805d757142
+   36  docker ps
+   37  docker stats
+   38  docker ps
+   39  docker logs newsletter
+   40  docker logs ipl-app
+   41  docker ps
+   42  docker inspect ipl-app
+   43  curl 172.17.0.3:3000
+   44  docker ps
+   45  docker inspect 5aa2e418c749
+   46  curl 172.17.0.2:80
+   47  docker ps
+   48  docker pause ipl-app
+   49  docker ps
+   50  docker unpause ipl-app
+   51  docker ps
+   52  docker stop ipl-app
+   53  docker ps -a
+   54  docker rm ipl-app
+   55  docker ps -a
+   56  docker rm -f 5aa2e418c749
+   57  docker ps -a
+   58  docker images
+   59  docker rmi newsletter:v1
+   60  docker images
+   61  docker rmi $(docker images -q)
+   62  docker images
+   63  docker pull muralisocial123/ipl:latest
+   64  docker images
+   65  docker run -d --name ipl1 -p 3000:3000 muralisocial123/ipl
+   66  docker ps
+   67  docker run -d --name ipl2 -p 3001:3000 muralisocial123/ipl
+   68  docker ps
+   69  docker run -d --name ipl3 -p 3002:3000 muralisocial123/ipl
+   70  docker ps
+   71  docker run -d --name ipl3 -p 3003:3000 muralisocial123/ipl
+   72  docker ps
+   73  docker run -d --name ipl4 -p 3003:3000 muralisocial123/ipl
+   74  docker ps
+   75  docker rm -f $(docker ps -aq)
+   76  docker ps
+   77  docker ps -a
+
+# container commands expalantion
+
+For pushing images 
+================
+
+	1. Docker Tag:- it will tag ur image with ur dockerhub username  
+
+docker tag <image-name>   <username/image-name>
+
+	2. Docker login :- 
+
+docker login -u muralisocial123
+
+	3. Docker push:- to pushing the into docker registry from ur host machine 
+
+docker push  <tagged image only>
+
+
+Container lifecycle 
+===============
+
+Docker create:- it will create only container 
+Docker run :- it will pull the image, it will create the container and it will start the container.
+Docker ps:- it will list only running containers
+Docker ps -a: it will list all containers in the server
+Docker start: it will start the container
+Docker stop:- it will stop the container
+Docker restart :- it will restart the container
+Docker stats:- it will show you container cpu, memory usage
+Docker logs:- it will give container or app logs
+Docker inspect:- it will give container ip add and all details of container
+Docker pause: it will pause only container process not the app
+Docker unpause:it will unpause the container process 
+Docker rm:- it will remove only stopped containers
+Docker rm -f :- it will delete running containers
+Docker rmi :- it will delete only unused images
+Docker rmi -f :- it will delete unsed images
+Docker rmi $(docker images -q): - to delete all images at time
+docker rm $(docker ps -aq): it will delete all stopped containers
+Yashwardhan Kashyap (Unverified)
+
+
+docker rm -f  $(docker ps -aq): it will delete all stopped n running containers.

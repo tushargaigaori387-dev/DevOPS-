@@ -1,0 +1,86 @@
+Docker network
+=============
+
+
+Wt is docker network?
+==================
+
+	Ø Network is to establish a communication between two persons, two servers, two app's and two machines
+	Ø A docker network allows containers to communicate with each other, the host machine or outside the world
+	Ø Without networks containers are isolated.
+
+Why docker networks?
+===================
+
+	Ø To connect containers, ex:- app + db 
+	Ø To control communication (isolate containers for security)
+	Ø To expose services  (like a web app accessible on browser 
+
+
+Types of docker networks
+=====================
+
+	1. Bridge network 
+  ================
+
+	Ø It is called as  default network
+	Ø It is for prod use
+	Ø Containers get their own ip add and they can talk to each other if on the same bridge 
+
+	2. Host network
+  ==============
+
+	Ø Containers shares hosts network namespace
+	Ø Containers won't get their own ip add
+
+	3. None network
+  ===============
+
+	Ø Containers completely isolated 
+	Ø Means there is no any internet connectivity to the containers 
+It is used for whenever you want to keep secure ur app from the internet
+
+Docker draw backs
+===============
+
+	Ø Docker containers are very light weight 
+	Ø Containers are not self-healing
+	Ø Docker will not support load balancing 
+Docker will not support auto scaling:- horizontal as:- increasing servers, vertical as:- increasing cpu,ram,rom
+
+
+
+
+
+
+
+# docker network practical commands
+
+    1  apt update -y
+    2  apt install docker.io -y
+    3  docker network ls
+    4  docker network create murali-nw
+    5  docker network ls
+    6  docker run -dit --name c1 --network murali-nw alpine sh
+    7  docker ps
+    8  docker run -dit --name c2 --network murali-nw ubuntu sh
+    9  docker ps
+   10  docker inspect network murali-nw
+   11  docker ps
+   12  docker exec -it c1 bash
+   13  docker exec -it c1 sh
+   14  docker exec -it c2 sh
+   15  docker network ls
+   16  docker run -dit --name d1 --network host nginx
+   17  ls
+   18  docker ps
+   19  docker inspect d1
+   20  ls
+   21  docker ps
+   22  curl localhost
+   23  curl http://localhost
+   24  docker network ls
+   25  docker run -dit --name d2 --network none alpine sh
+   26  docker ps
+   27  docker exec -it d2 sh
+   28  history

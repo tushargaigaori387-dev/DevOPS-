@@ -1,0 +1,135 @@
+  1  whoami
+    2  exit
+    3  whoami
+    4  ls
+    5  apt update -y
+    6  ls
+    7  touch murali
+    8  ls
+    9  touch hyd bnlr delhi
+   10  ls
+   11  touch index.html login.html
+   12  ls
+   13  vi index.html
+   14  ls
+   15  cat index.html
+   16  ls
+   17  nano hyd
+   18  ls
+   19  cat hyd
+   20  ls
+   21  vi index.html
+   22  ls
+   23  cat index.html
+   24  ls
+   25  > index.html
+   26  ls
+   27  cat index.html
+   28  vi index.html
+   29  ls
+   30  rm murali
+   31  ls
+   32  rm hyd
+   33  ls
+   34  rm delhi
+   35  ls
+   36  rm bnlr login.html index.html
+   37  ls
+   38  mkdir ipl
+   39  ls
+   40  cd ipl
+   41  pwd
+   42  touch srh rcb mi kkr csk rr gj dl kpks
+   43  ls
+   44  mkdir ind isro
+   45  ls
+   46  cd ind
+   47  ls
+   48  pwd
+   49  touch AP KL TN KR RJ WB UP
+   50  ls
+   51  mkdir UT
+   52  ls
+   53  cd UT
+   54  ls
+   55  pwd
+   56  cd ..
+   57  ls
+   58  cd ../..
+   59  ls
+   60  rmdir ipl
+   61  ls
+   62  cd ipl
+   63  ls
+   64  cd ind/
+   65  ls
+   66  rm -rf *
+   67  ls
+   68  cd ..
+   69  ls
+   70  rmdir ind
+   71  ls
+   72  cd ..
+   73  l
+   74  ls
+   75  rm -rf ipl
+   76  ls
+   77  touch murali
+   78  ls
+   79  mv murali mohan
+   80  ls
+   81  mkdir ipl
+   82  ls
+   83  mv ipl ind
+   84  ls
+   85  mv mohan ind/
+   86  l
+   87  ls
+   88  cd ind/
+   89  ls
+   90  mv mohan ..
+   91  ls
+   92  cd ..
+   93  ls
+   94  cp mohan ind/
+   95  ls
+   96  cd ind
+   97  ls
+   98  mv mohan ..
+   99  ls
+  100  cd ..
+  101  ls
+  102  apt install docker -y
+  103  apt update -y
+  104  apt install docker -y
+  105  docker
+  106  apt install docker.io -y
+  107  docker --version
+  108  ping www.flipkart.com
+  109  wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.108/bin/apache-tomcat-9.0.108.tar.gz
+  110  ls
+  111  adduser murali
+  112  su murali
+  113  adduser apple-user
+  114  su apple-user
+  115  ls
+  116  df -h
+  117  free -h
+  118  uptime
+  119  uname -a
+  120  ip a
+  121  ss -tuln
+  122  top
+  123  htop
+  124  ps aux
+  125  kill -9  3487
+  126  kill -9 3479
+  127  kill -9 2844
+  128  ps aux
+  129  history
+  130  ls
+  131  ls -la
+  132  ls
+  133  ls -la mohan
+  134  ls
+  135  history

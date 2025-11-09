@@ -1,0 +1,42 @@
+Docker volumes
+
+08 September 2025
+21:04
+
+	Ø If any container goes down or failed or deleted wt will happen?
+
+
+	Ø App down time
+	Ø App stopped
+	Ø We are going to losing our services i.e. losing business and customers
+	Ø We need to restart the container
+	Ø We will lose app data
+	Ø App files
+	Ø App folders
+	Ø Important info of app
+
+
+Wt is docker volume
+=================
+
+	Ø It is nothing but a directory 
+	Ø Whenever you are going to creating a volume you have to define a directory as a volume
+	Ø You can share one volume with no.of continers
+	Ø You have to create a volume along with container
+	Ø Once container got created it is difficult to create a volume
+	Ø Whenever your going to updating docker image volume will not be included
+	Ø Volume is going to creating out of the file system 
+	Ø If any container got delete still volume will be there and u can able to access ur app data
+
+
+Types of volumes
+==============
+
+	1. Anonymous volume:- there is no any meaningful name to ur volume 
+	2. Named volume:- you are going assigning a meaningful name to the volume
+	3. Bind volume:- it is nothing but you are going to choosing where you want to store ur data
+
+
+ --privileged=true:- 
+
+ --volumes-from
